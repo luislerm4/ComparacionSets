@@ -356,12 +356,12 @@ public class BenchmarkSets {
 
 Ejecute al menos tres veces:
 
- | Ejecución|     HashSet|   TreeSet|
-|-----------|---------|---------|
-|  1     |  0   |0|           
- | 2     |  0  |0|            
-|  3     | 0 |0|              
- | Promedio |   0    | 0    |     
+ | Ejecución| HashSet   | TreeSet   |
+|-----------|-----------|-----------|
+|  1     | 121.185ms | 194.220ms |           
+ | 2     | 135.175ms | 181.738ms |            
+|  3     | 156.900ms | 193.253ms |              
+ | Promedio | 137.753ms | 189.737ms |     
 
 Después mida búsquedas mediante `contains()` y eliminaciones. Compare
 los resultados con las complejidades esperadas. Los tiempos con
