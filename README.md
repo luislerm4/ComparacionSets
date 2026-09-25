@@ -317,7 +317,7 @@ TreeSet<String> tecnologias =
 ```
 
 **Pregunta:** ¿Qué ventaja proporciona definir el criterio de
-ordenamiento directamente en la colección?
+ordenamiento directamente en la colección? Permite cambiar las reglas de ordenamiento de forma automática y encapsulada sin tener que modificar la clase de los objetos ni ordenar manualmente la lista después de insertar datos
 
 ## 15. Experimento de desempeño
 
