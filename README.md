@@ -115,7 +115,7 @@ Si el elemento no pertenece al conjunto, `add()` devuelve `true`; si ya
 existe, devuelve `false`.
 
 **Pregunta:** ¿Cómo puede utilizarse este resultado para detectar
-registros duplicados?
+registros duplicados?  Como add() te regresa true si es nuevo y false si ya existía, nomás ponemos el .add() adentro de un if !.
 
 ## 7. Operaciones fundamentales
 
