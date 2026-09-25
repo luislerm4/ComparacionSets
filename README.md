@@ -178,14 +178,14 @@ conservar una relación de orden entre los elementos.
 
 Complete como hipótesis:
 
-  |Característica |                  `HashSet`  | `TreeSet`|
-  |----------------|---------------------------|-----------
-  |Permite duplicados|            |               
- | Mantiene orden de inserción |    |             
-  |Mantiene elementos ordenados |        |        
-  |Búsqueda eficiente|              |             
-  |Estructura conceptual |           |            
-  |Requiere elementos comparables  |        |     
+  |Característica | `HashSet`  | `TreeSet`|
+  |----------------|------------|-----------
+  |Permite duplicados| no         |    no           
+ | Mantiene orden de inserción | no         |   no          
+  |Mantiene elementos ordenados | no         |  si      
+  |Búsqueda eficiente| si O(1)    |  si O(log n)           
+  |Estructura conceptual | tabla hash |      arbol (red-black tree)      
+  |Requiere elementos comparables  | no         |     si
 
 ## 10. Complejidad temporal
 
