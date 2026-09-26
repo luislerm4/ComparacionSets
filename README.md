@@ -467,27 +467,27 @@ La decisión debe partir de los requisitos y operaciones predominantes.
 
 ## 20. Preguntas de análisis
 
-1.  ¿Qué característica fundamental define a `Set`?
-2.  ¿Permite `HashSet` elementos duplicados?
-3.  ¿Permite `TreeSet` elementos duplicados?
-4.  ¿Qué devuelve `add()` cuando el elemento ya existe?
-5.  ¿Por qué `HashSet` no garantiza un orden de iteración?
-6.  ¿Qué tipo de orden mantiene `TreeSet`?
-7.  ¿Cuál es la complejidad promedio de `HashSet.contains()`?
-8.  ¿Cuál es la complejidad de `TreeSet.contains()`?
-9.  ¿Por qué `TreeSet` tiene un costo adicional respecto a `HashSet`?
-10. ¿Qué ventaja proporciona `TreeSet.first()`?
-11. ¿Qué diferencia existe entre `lower()` y `floor()`?
-12. ¿Qué diferencia existe entre `higher()` y `ceiling()`?
-13. ¿Para qué sirve `subSet()`?
-14. ¿Qué papel desempeña un `Comparator` en `TreeSet`?
-15. ¿Cómo se implementa una unión utilizando `Set`?
-16. ¿Cómo se implementa una intersección?
-17. ¿Cómo se implementa una diferencia?
-18. ¿En qué escenario utilizaría `HashSet`?
-19. ¿En qué escenario utilizaría `TreeSet`?
+1.  ¿Qué característica fundamental define a `Set`? no permite duplicados y no garantiza un orden especifico en los elementos
+2.  ¿Permite `HashSet` elementos duplicados? no
+3.  ¿Permite `TreeSet` elementos duplicados? no 
+4.  ¿Qué devuelve `add()` cuando el elemento ya existe? false y no añade el elemento
+5.  ¿Por qué `HashSet` no garantiza un orden de iteración? por que se basa en una tabla hash donde los elementos se organizan segun su hashCode()
+6.  ¿Qué tipo de orden mantiene `TreeSet`? orden natural o definido por un comparator custom
+7.  ¿Cuál es la complejidad promedio de `HashSet.contains()`? O(1)
+8.  ¿Cuál es la complejidad de `TreeSet.contains()`? O(log n) 
+9.  ¿Por qué `TreeSet` tiene un costo adicional respecto a `HashSet`? por que necesita mantener la estructura del arbol en cada iteracion 
+10. ¿Qué ventaja proporciona `TreeSet.first()`?obtener el menor elemento de la coleccion sin tener que iterarla 
+11. ¿Qué diferencia existe entre `lower()` y `floor()`? lower busca estrictamente el menor que y floor busca el menor igual que
+12. ¿Qué diferencia existe entre `higher()` y `ceiling()`? higher busca estrictamente el mayor y ceiling busca el mayor igual que
+13. ¿Para qué sirve `subSet()`? obtener un subconjunto acotado por un rango inicio, fin
+14. ¿Qué papel desempeña un `Comparator` en `TreeSet`? define la logica custom de ordenamiento  como ignorar  mayusculas o orden inverso
+15. ¿Cómo se implementa una unión utilizando `Set`? Con setA.addAll(setB)
+16. ¿Cómo se implementa una intersección?Con setA.retainAll(setB)
+17. ¿Cómo se implementa una diferencia?Con setA.removeAll(setB)
+18. ¿En qué escenario utilizaría `HashSet`? Cuando solo importe unicidad y velocidad extrema ($O(1)$) sin importar el orden - Cuando solo importe unicidad y velocidad extrema ($O(1)$) sin importar el orden
+19. ¿En qué escenario utilizaría `TreeSet`?Cuando se necesite orden constante, navegación (lower, floor), mínimo/máximo o rangos
 20. ¿Por qué es conveniente declarar `Set<String>` en lugar de
-    `HashSet<String>` cuando solo se necesitan operaciones de `Set`?
+    `HashSet<String>` cuando solo se necesitan operaciones de `Set`? Aplica el principio de desacoplamiento (programar hacia interfaces), lo que permite cambiar la implementación (TreeSet, LinkedHashSet) en el futuro modificando solo una línea
 
 ## 21. Entregables
 
